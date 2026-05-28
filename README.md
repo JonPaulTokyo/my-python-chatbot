@@ -1,6 +1,7 @@
+
 # my-python-chatbot 🤖
 
-A powerful, intelligent conversational agent built with Python and powered by **Gemini AI Plus**. 
+A lightning-fast, intelligent conversational agent built with Python and powered by **Groq** and Meta's **Llama 3.1** model. 
 
 Created and maintained by [@JonPaulTokyo](https://github.com/JonPaulTokyo).
 
@@ -8,9 +9,10 @@ Created and maintained by [@JonPaulTokyo](https://github.com/JonPaulTokyo).
 
 ## 🌟 Features
 
-* **Advanced Conversational AI:** Utilizes the capabilities of Gemini AI Plus for nuanced, context-aware responses.
-* **Python Integration:** Built entirely in Python, making it lightweight, fast, and easy to extend.
-* **Customizable:** Easy to modify prompts, parameters, and conversational flows to suit your specific needs.
+* **Blazing Fast AI:** Utilizes the Groq API for ultra-low latency and near-instant response times.
+* **Llama 3.1 Engine:** Runs on Meta's highly capable `llama-3.1-8b-instant` model (with simple code tweaks to swap to Mixtral or others).
+* **Context-Aware:** Maintains a running chat history so the bot remembers the context of your conversation.
+* **Lightweight & Clean:** Built entirely in Python with minimal dependencies and built-in error handling.
 
 ---
 
@@ -19,7 +21,7 @@ Created and maintained by [@JonPaulTokyo](https://github.com/JonPaulTokyo).
 Before you begin, ensure you have the following installed:
 
 * **Python 3.8** or higher
-* A valid **Gemini API Key** (Make sure you have access to the Gemini Plus models)
+* A valid **Groq API Key** (You can generate one for free at the [Groq Console](https://console.groq.com/keys))
 
 ---
 
@@ -34,37 +36,40 @@ Before you begin, ensure you have the following installed:
 `source venv/bin/activate` *(On Windows use: `venv\Scripts\activate`)*
 
 **3. Install dependencies**
-`pip install -r requirements.txt`
+For this script, you only need the official Groq Python library:
+`pip install groq`
 
 ---
 
 ## ⚙️ Configuration
 
-To connect the chatbot to the Gemini AI Plus service, you need to set up your environment variables. 
+To connect the chatbot to the Groq servers, you need to set your API key as an environment variable in your terminal before running the script.
 
-1. Create a `.env` file in the root directory of your project.
-2. Add your Gemini API key to the file:
+* **Mac/Linux users:**
+  `export GROQ_API_KEY="your_actual_api_key_here"`
 
-`GEMINI_API_KEY=your_actual_api_key_here`
+* **Windows users:**
+  `set GROQ_API_KEY=your_actual_api_key_here`
 
-> **Note:** Never commit your `.env` file to version control! Ensure `.env` is listed in your `.gitignore` file.
+*(Note: For a more permanent local setup, you can install the `python-dotenv` library and use a `.env` file, or paste your key directly into the script for quick local testing only. Never upload your actual API key to GitHub!)*
 
 ---
 
 ## 💻 Usage
 
-To start the chatbot, simply run the main script from your terminal:
+To start the chatbot, simply run the Python script from your terminal:
 
-`python main.py`
+`python "Chatbot - TB.py"`
 
-Once running, type your message in the terminal and press `Enter` to chat with the AI. Type `quit` or `exit` to end the conversation.
+Once initialized, type your message in the terminal and press `Enter` to chat with the AI. Type `quit` or `exit` to end the conversation and shut down the bot.
 
 ---
 
 ## 🛠️ Built With
 
 * [Python](https://www.python.org/) - The programming language used
-* [Google Gemini API](https://ai.google.dev/) - The core LLM engine (Gemini AI Plus)
+* [Groq](https://groq.com/) - The ultra-fast AI inference engine
+* [Llama 3](https://llama.meta.com/) - The open-source LLM powering the responses
 
 ---
 
